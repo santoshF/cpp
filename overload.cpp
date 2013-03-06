@@ -21,16 +21,24 @@ void display(){
 cout<< " i =  "<<i<<endl;
 cout<< " j =  "<<j<<endl;
 }
+Over operator +(const Over &a){
+Over temp;
+temp.i = a.i + i;
+temp.j = a.j + j;
+ 
+return temp;
+}
 };
 
 
 
 int main(){
 Over o,b(2,5.6),a,c(b);
-
-o.display();
+o = a+b;
+//o.display();
 b.display();
 a.display();
 c.display();
+o.display();
 return 0;
 }
